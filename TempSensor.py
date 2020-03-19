@@ -29,6 +29,8 @@ while True:
     print("Error reading sensor")
     exit(1)
     
-    print("Temperature: %.2f C\t%.2f F" % (temp1.temperature(tsys01.UNITS_Farenheit), temp2.temperature(tsys01.UNITS_Farenheit))
+    print("TemperatureSens1: %.2f" % temp1.temperature(tsys01.UNITS_Farenheit)
+    print("TemperatureSens2: %.2f" % temp2.temperature(tsys01.UNITS_Farenheit)
+    print("")
     sleep(0.2)
 
