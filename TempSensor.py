@@ -1,4 +1,4 @@
-from time import sleep
+import time
 import board
 import busio
 import adafruit_tca9548a
@@ -13,7 +13,7 @@ temp2 = tsys01.TSYS01(tca[1])
 
 if not temp1.init():
   print("Error initializing temp. sensor 1")
-  exit(0)
+  exit(1)
   
 if not temp2.init():
   print("Error initializing temp. sensor 2")
@@ -22,7 +22,7 @@ if not temp2.init():
 while True:
   if not temp1.read():
     print("Error reading sensor")
-    exit(0)
+    exit(1)
     
 while True:
   if not temp2.read():
